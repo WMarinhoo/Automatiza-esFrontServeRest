@@ -26,6 +26,7 @@ ${BOTAO_LISTAR_USUARIOS}                      //a[@data-testid='listarUsuarios']
 ${BOTAO_EXCLUIR_USUARIO}                      //body[1]/div[1]/div[1]/div[1]/p[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/button[2]
 ${BOTAO_CADASTRAR_PRODUTOS}                   //a[@data-testid='cadastrarProdutos']
 ${BOTAO_LISTAR_PRODUTOS}                      //a[@data-testid='listarProdutos']
+${BOTAO_EXCLUIR_PRODUTO}                      //tbody/tr[1]/td[6]/div[1]/button[2]
 
 #MENSAGENS
 ${MENSAGEM_ALERT}                             //div[@role='alert']

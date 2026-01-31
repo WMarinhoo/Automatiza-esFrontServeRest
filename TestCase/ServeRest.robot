@@ -97,3 +97,13 @@ Cenário 08: Listar produtos no ServeRest
     E Clicar no botão "Listar Produtos"
     Printar tela
     Sleep    5s
+
+Cenário 09: Excluir produtos no ServeRest
+    Dado que esteja no Portal "ServeRest"
+    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Senha" o valor "teste"
+    E Clicar no botão "Entrar"
+    E Clicar no botão "Listar Produtos"
+    E Clicar no botão "Excluir Produto"
+    Printar tela
+    Sleep    5s
