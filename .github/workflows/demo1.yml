@@ -1,4 +1,4 @@
-name: Robot Framework Tests  # Nome que aparece na aba Actions
+name: Robot Framework TestCase  # Nome que aparece na aba Actions
 
 on:
   push:
