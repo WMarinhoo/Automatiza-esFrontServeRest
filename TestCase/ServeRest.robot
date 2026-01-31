@@ -8,7 +8,7 @@ Resource    ../Resource/ServeRest.robot
 #CENÁRIOS USUÁRIOS
 Cenário 01: realizar login no ServeRest
     Dado que esteja no Portal "ServeRest"
-    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Entrar"
     Printar tela
@@ -17,8 +17,8 @@ Cenário 01: realizar login no ServeRest
 Cenário 02: cadastrar usuário no ServeRest (Com permissão de Administrador)
     Dado que esteja no Portal "ServeRest"
     E Clicar no botão "Cadastre se"
-    E Inserir no campo "Nome" o valor "William marinho"
-    E Inserir no campo "Email" o valor "williammarinho@example.com"
+    E Inserir no campo "Nome" o valor "Gustavo marinho"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Cadastrar Adm"
     E Clicar no botão "Cadastrar"
@@ -28,8 +28,8 @@ Cenário 02: cadastrar usuário no ServeRest (Com permissão de Administrador)
 Cenário 03: cadastrar usuário no ServeRest (Sem permissão de Administrador)
     Dado que esteja no Portal "ServeRest"
     E Clicar no botão "Cadastre se"
-    E Inserir no campo "Nome" o valor "wesley marinho"
-    E Inserir no campo "Email" o valor "wesleymarinho@example.com"
+    E Inserir no campo "Nome" o valor "Gustavo marinho"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Cadastrar"
     Printar tela
@@ -37,7 +37,7 @@ Cenário 03: cadastrar usuário no ServeRest (Sem permissão de Administrador)
 
 Cenário 04: Listar usuários no ServeRest
     Dado que esteja no Portal "ServeRest"
-    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Entrar"
     E Clicar no botão "Listar Usuários"
@@ -46,7 +46,7 @@ Cenário 04: Listar usuários no ServeRest
 
 Cenário 05: Excluir usuários no ServeRest
     Dado que esteja no Portal "ServeRest"
-    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Entrar"
     E Clicar no botão "Listar Usuários"
@@ -55,19 +55,18 @@ Cenário 05: Excluir usuários no ServeRest
     Printar tela
     Sleep    5s
 
-
 #CENÁRIOS PRODUTOS
 Cenário 06: Cadastrar produtos no ServeRest
 #CENÁRIOS PRODUTOS
     Dado que esteja no Portal "ServeRest"
-    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Entrar"
     E Clicar no botão "Cadastrar Produtos"
-    E Inserir no campo "Nome" o valor "Ryzen 7 5800x3D"
-    E Inserir no campo "Preço" o valor "2500"
+    E Inserir no campo "Nome" o valor "Ryzen 8 5800x3D"
+    E Inserir no campo "Preço" o valor "2600"
     E Inserir no campo "Descrição" o valor "Teste QA"
-    E Inserir no campo "Quantidade" o valor "10"
+    E Inserir no campo "Quantidade" o valor "20"
     Fazer Upload de Imagem Dinâmico    ${CAMPO_IMAGEM}    ${NOME_IMAGEM}
     E Clicar no botão "Cadastrar"
     Printar tela
@@ -75,14 +74,14 @@ Cenário 06: Cadastrar produtos no ServeRest
 
 Cenário 07: Forçar Cadastrar produtos dubplicados no ServeRest
     Dado que esteja no Portal "ServeRest"
-    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Entrar"
     E Clicar no botão "Cadastrar Produtos"
-    E Inserir no campo "Nome" o valor "Ryzen 7 5800x3D"
-    E Inserir no campo "Preço" o valor "2500"
+    E Inserir no campo "Nome" o valor "Ryzen 8 5800x3D"
+    E Inserir no campo "Preço" o valor "2600"
     E Inserir no campo "Descrição" o valor "Teste QA"
-    E Inserir no campo "Quantidade" o valor "10"
+    E Inserir no campo "Quantidade" o valor "20"
     Fazer Upload de Imagem Dinâmico    ${CAMPO_IMAGEM}    ${NOME_IMAGEM}
     E Clicar no botão "Cadastrar"
     Ler Mensagem De Erro Cadastro Produto
@@ -91,7 +90,7 @@ Cenário 07: Forçar Cadastrar produtos dubplicados no ServeRest
 
 Cenário 08: Listar produtos no ServeRest
     Dado que esteja no Portal "ServeRest"
-    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Entrar"
     E Clicar no botão "Listar Produtos"
@@ -100,7 +99,7 @@ Cenário 08: Listar produtos no ServeRest
 
 Cenário 09: Excluir produtos no ServeRest
     Dado que esteja no Portal "ServeRest"
-    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
     E Clicar no botão "Entrar"
     E Clicar no botão "Listar Produtos"

@@ -2,7 +2,6 @@
 Documentation    Essa suíte testa meu prjeto da automação de N cenários no front do ServeRest!
 Resource    ../Utils/Utils.robot       
 
-
 *** Variables ***
 #TELA
 ${TELA_SERVEREST}                            https://front.serverest.dev/login
@@ -66,7 +65,6 @@ E ler a mensagem "${NOME_MENSAGEM}"
     ${NOME_MENSAGEM}=    Gera Frase Em String                             ${NOME_MENSAGEM}
     Wait Until Element Is Visible                                         ${MENSAGEM_${NOME_MENSAGEM}}                          ${TIMEOUT}
     Element Should Contain                                                ${MENSAGEM_${NOME_MENSAGEM}}    None
-
 
 
 Ler Mensagem De Erro Cadastro Produto
