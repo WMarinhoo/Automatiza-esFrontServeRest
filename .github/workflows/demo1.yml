@@ -43,12 +43,12 @@ jobs:
         run: |
           # Comando básico: roda todos os .robot na pasta TestCase/
           robot --outputdir results --loglevel TRACE:INFO TestCase/
-          
+          robot --outputdir results TestCase/
           # Exemplos alternativos (descomente o que precisar):
-          # robot --outputdir results --include Smoke tests/               # Só cenários com tag @Smoke
-          # robot --outputdir results --variable ENV:PROD tests/           # Passa variável de ambiente
-          # robot --outputdir results --exclude NotReady tests/            # Ignora cenários pendentes
-          # python -m robot.run --outputdir results tests/                 # Alternativa usando módulo
+          robot --outputdir results --include Smoke TestCase/            # Só cenários com tag @Smoke
+          robot --outputdir results --variable ENV:PROD TestCase/           # Passa variável de ambiente
+          robot --outputdir results --exclude NotReady TestCase/            # Ignora cenários pendentes
+          python -m robot.run --outputdir results TestCase/                 # Alternativa usando módulo
 
       - name: Upload results as artifact  # Salva relatórios mesmo se falhar (muito útil!)
         if: always()  # Roda sempre (sucesso ou falha)
