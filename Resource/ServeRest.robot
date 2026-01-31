@@ -8,11 +8,16 @@ Resource    ../Utils/Utils.robot
 ${TELA_SERVEREST}                            https://front.serverest.dev/login
 
 #INPUTS (CAIXA DE TEXTO)
-${CAMPO_EMAIL_LOGIN}                         //input[@id='email']
-${CAMPO_SENHA}                               //input[@id='password']
+${CAMPO_EMAIL_USUARIO}                        //input[@id='email']
+${CAMPO_SENHA_USUARIO}                        //input[@id='password']
+${CAMPO_NOME_USUARIO}                         //input[@id='nome']
 
 #BOTÕES
-${BOTAO_ENTRAR}                              //button[normalize-space()='Entrar']
+${BOTAO_ENTRAR}                               //button[normalize-space()='Entrar']
+${BOTAO_CADASTRE_SE}                          //a[normalize-space()='Cadastre-se']
+${BOTAO_CADASTRAR_ADM}                        //input[@id='administrador']
+${BOTAO_CADASTRAR}                            //button[normalize-space()='Cadastrar']
+
 
 *** Keywords ***
 Dado que esteja no Portal "ServeRest"
