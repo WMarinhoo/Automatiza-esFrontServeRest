@@ -17,11 +17,11 @@ ${BOTAO_ENTRAR}                               //button[normalize-space()='Entrar
 ${BOTAO_CADASTRE_SE}                          //a[normalize-space()='Cadastre-se']
 ${BOTAO_CADASTRAR_ADM}                        //input[@id='administrador']
 ${BOTAO_CADASTRAR}                            //button[normalize-space()='Cadastrar']
-
+${BOTAO_LISTAR_USUARIOS}                      //a[@data-testid='listarUsuarios']
 
 *** Keywords ***
 Dado que esteja no Portal "ServeRest"
-    Open Browser                                                          ${TELA_SERVEREST}                                  chrome 
+    Open Browser                                                          ${TELA_SERVEREST}                                 chrome 
     Maximize Browser Window
 
 E Inserir no campo "${CAMPO}" o valor "${VALOR}"
@@ -34,3 +34,7 @@ E Clicar no botão "${NOME_BOTAO}"
     ${NOME_BOTAO}=    Gera Frase Em String                                ${NOME_BOTAO}
     Wait Until Element Is Visible                                         ${BOTAO_${NOME_BOTAO}}                            ${TIMEOUT}              
     Click Element                                                         ${BOTAO_${NOME_BOTAO}}
+
+Printar tela
+    Sleep    3s
+    Capture Page Screenshot
