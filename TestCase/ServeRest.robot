@@ -55,8 +55,10 @@ Cenário 05: Excluir usuários no ServeRest
     Printar tela
     Sleep    5s
 
+
 #CENÁRIOS PRODUTOS
 Cenário 06: Cadastrar produtos no ServeRest
+#CENÁRIOS PRODUTOS
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
