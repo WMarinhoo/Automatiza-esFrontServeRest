@@ -30,6 +30,7 @@ jobs:
           pip install robotframework-browser
           pip install robotframework-databaselibrary
           pip install rpaframework
+          pip install robotframework-faker          # ← Adicione esta linha!
           # Se tiver requirements.txt → descomente:
           # pip install -r requirements.txt
 
