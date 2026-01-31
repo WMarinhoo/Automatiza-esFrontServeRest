@@ -8,9 +8,14 @@ Resource    ../Utils/Utils.robot
 ${TELA_SERVEREST}                            https://front.serverest.dev/login
 
 #INPUTS (CAIXA DE TEXTO)
-${CAMPO_EMAIL_USUARIO}                        //input[@id='email']
-${CAMPO_SENHA_USUARIO}                        //input[@id='password']
-${CAMPO_NOME_USUARIO}                         //input[@id='nome']
+${CAMPO_EMAIL}                        //input[@id='email']
+${CAMPO_SENHA}                        //input[@id='password']
+${CAMPO_NOME}                         //input[@id='nome']
+${CAMPO_PRECO}                        //input[@id='price']
+${CAMPO_DESCRICAO}                    //textarea[@id='description']
+${CAMPO_QUANTIDADE}                   //input[@id='quantity']
+${CAMPO_IMAGEM}                       //input[@id='imagem']
+${NOME_IMAGEM}                        Ryzen7600x3D.png
 
 #BOTÕES
 ${BOTAO_ENTRAR}                               //button[normalize-space()='Entrar']
@@ -19,6 +24,7 @@ ${BOTAO_CADASTRAR_ADM}                        //input[@id='administrador']
 ${BOTAO_CADASTRAR}                            //button[normalize-space()='Cadastrar']
 ${BOTAO_LISTAR_USUARIOS}                      //a[@data-testid='listarUsuarios']
 ${BOTAO_EXCLUIR_USUARIO}                      //body[1]/div[1]/div[1]/div[1]/p[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/button[2]
+${BOTAO_CADASTRAR_PRODUTOS}                   //a[@data-testid='cadastrarProdutos']
 
 *** Keywords ***
 Dado que esteja no Portal "ServeRest"
@@ -39,3 +45,15 @@ E Clicar no botão "${NOME_BOTAO}"
 Printar tela
     Sleep    3s
     Capture Page Screenshot
+
+Fazer Upload de Imagem Dinâmico
+    [Arguments]    ${CAMPO_IMAGEM}    ${NOME_IMAGEM}
+
+    ${CAMINHO_IMAGEM}=    Set Variable
+    ...    ${EXECDIR}${/}Utils${/}Fixtures${/}Uploads${/}${NOME_IMAGEM}
+
+    Log    Caminho da imagem: ${CAMINHO_IMAGEM}
+
+    Wait Until Element Is Visible    ${CAMPO_IMAGEM}    10s
+    Choose File    ${CAMPO_IMAGEM}    ${CAMINHO_IMAGEM}
+
