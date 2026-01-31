@@ -41,8 +41,8 @@ jobs:
 
       - name: Run Robot Framework TestCase
         run: |
-          # Comando básico: roda todos os .robot na pasta tests/
-          robot --outputdir results --loglevel TRACE:INFO tests/
+          # Comando básico: roda todos os .robot na pasta TestCase/
+          robot --outputdir results --loglevel TRACE:INFO TestCase/
           
           # Exemplos alternativos (descomente o que precisar):
           # robot --outputdir results --include Smoke tests/               # Só cenários com tag @Smoke
