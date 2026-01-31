@@ -1,310 +1,388 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-31T15:54:06.113222" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-31T16:22:05.865082" rpa="false" schemaversion="5">
 <suite id="s1" name="ServeRest" source="C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest">
 <suite id="s1-s1" name="TestCase" source="C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\TestCase">
 <suite id="s1-s1-s1" name="ServeRest" source="C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\TestCase\ServeRest.robot">
-<test id="s1-s1-s1-t1" name="Cenário 06: Cadastrar produtos no ServeRest" line="59">
+<test id="s1-s1-s1-t1" name="Cenário 07: Forçar Cadastrar produtos dubplicados no ServeRest" line="78">
 <kw name="Dado que esteja no Portal &quot;ServeRest&quot;" owner="ServeRest">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:07.313669" level="INFO">Opening browser 'chrome' to base url 'https://front.serverest.dev/login'.</msg>
+<msg time="2026-01-31T16:22:07.183705" level="INFO">Opening browser 'chrome' to base url 'https://front.serverest.dev/login'.</msg>
 <arg>${TELA_SERVEREST}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-01-31T15:54:07.313669" elapsed="3.272332"/>
+<status status="PASS" start="2026-01-31T16:22:07.183705" elapsed="3.309737"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-01-31T15:54:10.586497" elapsed="0.138737"/>
+<status status="PASS" start="2026-01-31T16:22:10.494439" elapsed="0.113553"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:07.310677" elapsed="3.415563"/>
+<status status="PASS" start="2026-01-31T16:22:07.181361" elapsed="3.426631"/>
 </kw>
 <kw name="E Inserir no campo &quot;Email&quot; o valor &quot;wendelmarinhoo@qa.com.br&quot;" owner="ServeRest" source_name="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:10.732582" level="INFO">${CAMPO} = EMAIL</msg>
+<msg time="2026-01-31T16:22:10.612080" level="INFO">${CAMPO} = EMAIL</msg>
 <var>${CAMPO}</var>
 <arg>${CAMPO}</arg>
-<status status="PASS" start="2026-01-31T15:54:10.729454" elapsed="0.003128"/>
+<status status="PASS" start="2026-01-31T16:22:10.611057" elapsed="0.001023"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:10.733079" elapsed="0.072115"/>
+<status status="PASS" start="2026-01-31T16:22:10.613633" elapsed="0.065617"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-01-31T15:54:10.805194" elapsed="0.020805"/>
+<status status="PASS" start="2026-01-31T16:22:10.680259" elapsed="0.035778"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:10.825999" level="INFO">Typing text 'wendelmarinhoo@qa.com.br' into text field '//input[@id='email']'.</msg>
+<msg time="2026-01-31T16:22:10.716037" level="INFO">Typing text 'wendelmarinhoo@qa.com.br' into text field '//input[@id='email']'.</msg>
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:10.825999" elapsed="0.082307"/>
+<status status="PASS" start="2026-01-31T16:22:10.716037" elapsed="0.090168"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:10.726969" elapsed="0.181337"/>
+<status status="PASS" start="2026-01-31T16:22:10.609034" elapsed="0.198151"/>
 </kw>
 <kw name="E Inserir no campo &quot;Senha&quot; o valor &quot;teste&quot;" owner="ServeRest" source_name="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:10.909303" level="INFO">${CAMPO} = SENHA</msg>
+<msg time="2026-01-31T16:22:10.810502" level="INFO">${CAMPO} = SENHA</msg>
 <var>${CAMPO}</var>
 <arg>${CAMPO}</arg>
-<status status="PASS" start="2026-01-31T15:54:10.909303" elapsed="0.000996"/>
+<status status="PASS" start="2026-01-31T16:22:10.810502" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:10.910957" elapsed="0.019800"/>
+<status status="PASS" start="2026-01-31T16:22:10.810502" elapsed="0.018098"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-01-31T15:54:10.930757" elapsed="0.020956"/>
+<status status="PASS" start="2026-01-31T16:22:10.828600" elapsed="0.027262"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:10.954707" level="INFO">Typing text 'teste' into text field '//input[@id='password']'.</msg>
+<msg time="2026-01-31T16:22:10.855862" level="INFO">Typing text 'teste' into text field '//input[@id='password']'.</msg>
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:10.952712" elapsed="0.071216"/>
+<status status="PASS" start="2026-01-31T16:22:10.855862" elapsed="0.084123"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:10.908306" elapsed="0.115622"/>
+<status status="PASS" start="2026-01-31T16:22:10.808363" elapsed="0.131622"/>
 </kw>
 <kw name="E Clicar no botão &quot;Entrar&quot;" owner="ServeRest" source_name="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:11.025920" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
+<msg time="2026-01-31T16:22:10.943548" level="INFO">${NOME_BOTAO} = ENTRAR</msg>
 <var>${NOME_BOTAO}</var>
 <arg>${NOME_BOTAO}</arg>
-<status status="PASS" start="2026-01-31T15:54:11.024923" elapsed="0.001229"/>
+<status status="PASS" start="2026-01-31T16:22:10.942557" elapsed="0.000991"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:11.026152" elapsed="0.016980"/>
+<status status="PASS" start="2026-01-31T16:22:10.944542" elapsed="0.016035"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:11.046133" level="INFO">Clicking element '//button[normalize-space()='Entrar']'.</msg>
+<msg time="2026-01-31T16:22:10.962236" level="INFO">Clicking element '//button[normalize-space()='Entrar']'.</msg>
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:11.044131" elapsed="0.054830"/>
+<status status="PASS" start="2026-01-31T16:22:10.961580" elapsed="0.060723"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:11.024923" elapsed="0.074547"/>
+<status status="PASS" start="2026-01-31T16:22:10.941028" elapsed="0.081275"/>
 </kw>
 <kw name="E Clicar no botão &quot;Cadastrar Produtos&quot;" owner="ServeRest" source_name="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:11.100479" level="INFO">${NOME_BOTAO} = CADASTRAR_PRODUTOS</msg>
+<msg time="2026-01-31T16:22:11.025185" level="INFO">${NOME_BOTAO} = CADASTRAR_PRODUTOS</msg>
 <var>${NOME_BOTAO}</var>
 <arg>${NOME_BOTAO}</arg>
-<status status="PASS" start="2026-01-31T15:54:11.100479" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-31T16:22:11.024061" elapsed="0.001124"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:11.100479" elapsed="0.864008"/>
+<status status="PASS" start="2026-01-31T16:22:11.027261" elapsed="0.905345"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:11.965574" level="INFO">Clicking element '//a[@data-testid='cadastrarProdutos']'.</msg>
+<msg time="2026-01-31T16:22:11.934197" level="INFO">Clicking element '//a[@data-testid='cadastrarProdutos']'.</msg>
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:11.964487" elapsed="0.112769"/>
+<status status="PASS" start="2026-01-31T16:22:11.933102" elapsed="0.061192"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:11.099470" elapsed="0.977786"/>
+<status status="PASS" start="2026-01-31T16:22:11.022303" elapsed="0.973003"/>
 </kw>
 <kw name="E Inserir no campo &quot;Nome&quot; o valor &quot;Ryzen 7 5800x3D&quot;" owner="ServeRest" source_name="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:12.080274" level="INFO">${CAMPO} = NOME</msg>
+<msg time="2026-01-31T16:22:11.996286" level="INFO">${CAMPO} = NOME</msg>
 <var>${CAMPO}</var>
 <arg>${CAMPO}</arg>
-<status status="PASS" start="2026-01-31T15:54:12.080274" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-31T16:22:11.996286" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.081429" elapsed="0.017158"/>
+<status status="PASS" start="2026-01-31T16:22:11.997283" elapsed="0.019917"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.098587" elapsed="0.015952"/>
+<status status="PASS" start="2026-01-31T16:22:12.017200" elapsed="0.017871"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:12.115536" level="INFO">Typing text 'Ryzen 7 5800x3D' into text field '//input[@id='nome']'.</msg>
+<msg time="2026-01-31T16:22:12.036275" level="INFO">Typing text 'Ryzen 7 5800x3D' into text field '//input[@id='nome']'.</msg>
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.114539" elapsed="0.077514"/>
+<status status="PASS" start="2026-01-31T16:22:12.036275" elapsed="0.075000"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:12.078275" elapsed="0.114768"/>
+<status status="PASS" start="2026-01-31T16:22:11.995306" elapsed="0.115969"/>
 </kw>
 <kw name="E Inserir no campo &quot;Preço&quot; o valor &quot;2500&quot;" owner="ServeRest" source_name="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:12.196033" level="INFO">${CAMPO} = PRECO</msg>
+<msg time="2026-01-31T16:22:12.114262" level="INFO">${CAMPO} = PRECO</msg>
 <var>${CAMPO}</var>
 <arg>${CAMPO}</arg>
-<status status="PASS" start="2026-01-31T15:54:12.196033" elapsed="0.000994"/>
+<status status="PASS" start="2026-01-31T16:22:12.113266" elapsed="0.000996"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.197027" elapsed="0.101797"/>
+<status status="PASS" start="2026-01-31T16:22:12.114262" elapsed="0.091590"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.298824" elapsed="0.017907"/>
+<status status="PASS" start="2026-01-31T16:22:12.205852" elapsed="0.027680"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:12.317729" level="INFO">Typing text '2500' into text field '//input[@id='price']'.</msg>
+<msg time="2026-01-31T16:22:12.234527" level="INFO">Typing text '2500' into text field '//input[@id='price']'.</msg>
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.317729" elapsed="0.048413"/>
+<status status="PASS" start="2026-01-31T16:22:12.234527" elapsed="0.045231"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:12.194028" elapsed="0.172114"/>
+<status status="PASS" start="2026-01-31T16:22:12.112277" elapsed="0.167481"/>
 </kw>
 <kw name="E Inserir no campo &quot;Descrição&quot; o valor &quot;Teste QA&quot;" owner="ServeRest" source_name="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:12.368237" level="INFO">${CAMPO} = DESCRICAO</msg>
+<msg time="2026-01-31T16:22:12.280803" level="INFO">${CAMPO} = DESCRICAO</msg>
 <var>${CAMPO}</var>
 <arg>${CAMPO}</arg>
-<status status="PASS" start="2026-01-31T15:54:12.368237" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-31T16:22:12.280803" elapsed="0.000997"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.368237" elapsed="0.031908"/>
+<status status="PASS" start="2026-01-31T16:22:12.281800" elapsed="0.022611"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.400145" elapsed="0.034214"/>
+<status status="PASS" start="2026-01-31T16:22:12.304411" elapsed="0.034911"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:12.434359" level="INFO">Typing text 'Teste QA' into text field '//textarea[@id='description']'.</msg>
+<msg time="2026-01-31T16:22:12.341471" level="INFO">Typing text 'Teste QA' into text field '//textarea[@id='description']'.</msg>
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.434359" elapsed="0.077613"/>
+<status status="PASS" start="2026-01-31T16:22:12.340394" elapsed="0.076526"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:12.367250" elapsed="0.145707"/>
+<status status="PASS" start="2026-01-31T16:22:12.280803" elapsed="0.137125"/>
 </kw>
 <kw name="E Inserir no campo &quot;Quantidade&quot; o valor &quot;10&quot;" owner="ServeRest" source_name="E Inserir no campo &quot;${CAMPO}&quot; o valor &quot;${VALOR}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:12.517254" level="INFO">${CAMPO} = QUANTIDADE</msg>
+<msg time="2026-01-31T16:22:12.421911" level="INFO">${CAMPO} = QUANTIDADE</msg>
 <var>${CAMPO}</var>
 <arg>${CAMPO}</arg>
-<status status="PASS" start="2026-01-31T15:54:12.516796" elapsed="0.000480"/>
+<status status="PASS" start="2026-01-31T16:22:12.420921" elapsed="0.000990"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.517276" elapsed="0.022681"/>
+<status status="PASS" start="2026-01-31T16:22:12.422906" elapsed="0.033340"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${CAMPO_${CAMPO}}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.540964" elapsed="0.032522"/>
+<status status="PASS" start="2026-01-31T16:22:12.457248" elapsed="0.041893"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:12.574481" level="INFO">Typing text '10' into text field '//input[@id='quantity']'.</msg>
+<msg time="2026-01-31T16:22:12.502288" level="INFO">Typing text '10' into text field '//input[@id='quantity']'.</msg>
 <arg>${CAMPO_${CAMPO}}</arg>
 <arg>${VALOR}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.573486" elapsed="0.068741"/>
+<status status="PASS" start="2026-01-31T16:22:12.500133" elapsed="0.079955"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:12.514721" elapsed="0.128513"/>
+<status status="PASS" start="2026-01-31T16:22:12.419920" elapsed="0.161184"/>
 </kw>
 <kw name="Fazer Upload de Imagem Dinâmico" owner="ServeRest">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-31T15:54:12.645530" level="INFO">${CAMINHO_IMAGEM} = C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Fixtures\Uploads\Ryzen7600x3D.png</msg>
+<msg time="2026-01-31T16:22:12.582913" level="INFO">${CAMINHO_IMAGEM} = C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Fixtures\Uploads\Ryzen7600x3D.png</msg>
 <var>${CAMINHO_IMAGEM}</var>
 <arg>${EXECDIR}${/}Utils${/}Fixtures${/}Uploads${/}${NOME_IMAGEM}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.645530" elapsed="0.002005"/>
+<status status="PASS" start="2026-01-31T16:22:12.582088" elapsed="0.002858"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-01-31T15:54:12.649514" level="INFO">Caminho da imagem: C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Fixtures\Uploads\Ryzen7600x3D.png</msg>
+<msg time="2026-01-31T16:22:12.587921" level="INFO">Caminho da imagem: C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Fixtures\Uploads\Ryzen7600x3D.png</msg>
 <arg>Caminho da imagem: ${CAMINHO_IMAGEM}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.648548" elapsed="0.000966"/>
+<status status="PASS" start="2026-01-31T16:22:12.586930" elapsed="0.000991"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CAMPO_IMAGEM}</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.649514" elapsed="0.036276"/>
+<status status="PASS" start="2026-01-31T16:22:12.588917" elapsed="0.028397"/>
 </kw>
 <kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:12.687351" level="INFO">Sending C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Fixtures\Uploads\Ryzen7600x3D.png to browser.</msg>
+<msg time="2026-01-31T16:22:12.620694" level="INFO">Sending C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Fixtures\Uploads\Ryzen7600x3D.png to browser.</msg>
 <arg>${CAMPO_IMAGEM}</arg>
 <arg>${CAMINHO_IMAGEM}</arg>
 <doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.686854" elapsed="0.037680"/>
+<status status="PASS" start="2026-01-31T16:22:12.617488" elapsed="0.054858"/>
 </kw>
 <arg>${CAMPO_IMAGEM}</arg>
 <arg>${NOME_IMAGEM}</arg>
-<status status="PASS" start="2026-01-31T15:54:12.644026" elapsed="0.080508"/>
+<status status="PASS" start="2026-01-31T16:22:12.581104" elapsed="0.091242"/>
 </kw>
 <kw name="E Clicar no botão &quot;Cadastrar&quot;" owner="ServeRest" source_name="E Clicar no botão &quot;${NOME_BOTAO}&quot;">
 <kw name="Gera Frase Em String" owner="RPA_Utils">
-<msg time="2026-01-31T15:54:12.725655" level="INFO">${NOME_BOTAO} = CADASTRAR</msg>
+<msg time="2026-01-31T16:22:12.675076" level="INFO">${NOME_BOTAO} = CADASTRAR</msg>
 <var>${NOME_BOTAO}</var>
 <arg>${NOME_BOTAO}</arg>
-<status status="PASS" start="2026-01-31T15:54:12.725655" elapsed="0.000000"/>
+<status status="PASS" start="2026-01-31T16:22:12.674135" elapsed="0.000941"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <arg>${TIMEOUT}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.725655" elapsed="0.022248"/>
+<status status="PASS" start="2026-01-31T16:22:12.676126" elapsed="0.038442"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:12.749926" level="INFO">Clicking element '//button[normalize-space()='Cadastrar']'.</msg>
+<msg time="2026-01-31T16:22:12.716156" level="INFO">Clicking element '//button[normalize-space()='Cadastrar']'.</msg>
 <arg>${BOTAO_${NOME_BOTAO}}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.748928" elapsed="0.046973"/>
+<status status="PASS" start="2026-01-31T16:22:12.715657" elapsed="0.043150"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:12.724534" elapsed="0.072353"/>
+<status status="PASS" start="2026-01-31T16:22:12.673428" elapsed="0.086404"/>
+</kw>
+<kw name="Ler Mensagem De Erro Cadastro Produto" owner="ServeRest">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-31T16:22:12.761807" level="INFO">${seletor_banner} = xpath=//div[contains(., 'Já existe produto com esse nome') or contains(@class, 'alert') or contains(@style, 'background')]</msg>
+<var>${seletor_banner}</var>
+<arg>xpath=//div[contains(., 'Já existe produto com esse nome') or contains(@class, 'alert') or contains(@style, 'background')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-31T16:22:12.760810" elapsed="0.000997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${seletor_banner}</arg>
+<arg>${timeout}</arg>
+<arg>msg=Banner de erro não apareceu em ${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-31T16:22:12.761807" elapsed="0.454782"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-01-31T16:22:13.246474" level="INFO">${mensagem} = Home
+Cadastrar Usuários
+Listar Usuários
+Cadastrar Produtos
+Listar Produtos
+Relatórios
+Logout
+×
+Já existe produto com esse nome
+Cadastro de Produtos
+Nome: *
+Preço: *
+Descrição: *
+Quantidade: *
+Imagem: ...</msg>
+<var>${mensagem}</var>
+<arg>${seletor_banner}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T16:22:13.216589" elapsed="0.029885"/>
+</kw>
+<kw name="Strip String" owner="String">
+<msg time="2026-01-31T16:22:13.249455" level="INFO">${mensagem_limpa} = Home
+Cadastrar Usuários
+Listar Usuários
+Cadastrar Produtos
+Listar Produtos
+Relatórios
+Logout
+×
+Já existe produto com esse nome
+Cadastro de Produtos
+Nome: *
+Preço: *
+Descrição: *
+Quantidade: *
+Imagem: ...</msg>
+<var>${mensagem_limpa}</var>
+<arg>${mensagem}</arg>
+<doc>Remove leading and/or trailing whitespaces from the given string.</doc>
+<status status="PASS" start="2026-01-31T16:22:13.247461" elapsed="0.001994"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Mensagem capturada do banner vermelho: "${mensagem_limpa}"</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T16:22:13.250529" elapsed="0.003006"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${acao_apos}' == 'FECHAR'</arg>
+<arg>Click Element</arg>
+<arg>${seletor_banner}//button | ${seletor_banner}//span[contains(text(),'×')] | ${seletor_banner}//*[contains(@class,'close')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-01-31T16:22:13.254497" elapsed="0.001002"/>
+</kw>
+<return>
+<value>${mensagem_limpa}</value>
+<status status="PASS" start="2026-01-31T16:22:13.255499" elapsed="0.000000"/>
+</return>
+<doc>Lê o texto do banner de erro vermelho (toast/alert div) após tentar cadastrar produto duplicado.
+Espera aparecer, captura o texto e retorna.
+Opcionalmente valida com Should Contain ou Should Be Equal.</doc>
+<status status="PASS" start="2026-01-31T16:22:12.760810" elapsed="0.495686"/>
 </kw>
 <kw name="Printar tela" owner="ServeRest">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-31T15:54:15.798314" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-01-31T16:22:16.258561" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-31T15:54:12.797894" elapsed="3.001314"/>
+<status status="PASS" start="2026-01-31T16:22:13.257492" elapsed="3.001069"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-01-31T15:54:15.907974" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-31T16:22:16.341905" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-01-31T15:54:15.800279" elapsed="0.108703"/>
+<status status="PASS" start="2026-01-31T16:22:16.259529" elapsed="0.083407"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:12.796887" elapsed="3.112095"/>
+<status status="PASS" start="2026-01-31T16:22:13.256496" elapsed="3.086440"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-31T15:54:20.911657" level="INFO">Slept 5 seconds.</msg>
+<msg time="2026-01-31T16:22:21.345174" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-31T15:54:15.910064" elapsed="5.001593"/>
+<status status="PASS" start="2026-01-31T16:22:16.343899" elapsed="5.001275"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-01-31T15:54:20.912648" elapsed="2.236724"/>
+<status status="PASS" start="2026-01-31T16:22:21.346180" elapsed="2.226407"/>
 </kw>
-<status status="PASS" start="2026-01-31T15:54:07.305204" elapsed="15.844168"/>
+<status status="PASS" start="2026-01-31T16:22:07.177226" elapsed="16.396375"/>
 </test>
-<status status="PASS" start="2026-01-31T15:54:06.157794" elapsed="16.996859"/>
+<status status="PASS" start="2026-01-31T16:22:05.915558" elapsed="17.668373"/>
 </suite>
-<status status="PASS" start="2026-01-31T15:54:06.154176" elapsed="17.004171"/>
+<status status="PASS" start="2026-01-31T16:22:05.909576" elapsed="17.680864"/>
 </suite>
-<status status="PASS" start="2026-01-31T15:54:06.117858" elapsed="17.043764"/>
+<status status="PASS" start="2026-01-31T16:22:05.870635" elapsed="17.726786"/>
 </suite>
 <statistics>
 <total>
@@ -319,7 +397,7 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2026-01-31T15:54:06.346500" level="ERROR">Error in file 'C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Utils.robot' on line 7: Importing library 'DatabaseLibrary' failed: ModuleNotFoundError: No module named 'DatabaseLibrary'
+<msg time="2026-01-31T16:22:06.110071" level="ERROR">Error in file 'C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Utils\Utils.robot' on line 7: Importing library 'DatabaseLibrary' failed: ModuleNotFoundError: No module named 'DatabaseLibrary'
 Traceback (most recent call last):
   None
 PYTHONPATH:
@@ -335,5 +413,6 @@ PYTHONPATH:
   C:\Users\downl\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32
   C:\Users\downl\AppData\Local\Programs\Python\Python311\Lib\site-packages\win32\lib
   C:\Users\downl\AppData\Local\Programs\Python\Python311\Lib\site-packages\Pythonwin</msg>
+<msg time="2026-01-31T16:22:07.163712" level="WARN">Error in file 'C:\Users\downl\Desktop\Pasta do QA\Projetos Robot\ServeRest\Resource\ServeRest.robot' on line 95: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
 </errors>
 </robot>
