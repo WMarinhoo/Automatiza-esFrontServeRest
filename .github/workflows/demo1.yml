@@ -30,7 +30,12 @@ jobs:
           pip install robotframework-appiumlibrary            # Se tiver mobile
           pip install robotframework-browser                  # Alternativa moderna ao Selenium (recomendado)
           # pip install -r requirements.txt                   # Se você tiver um arquivo requirements.txt com todas as deps
-
+          # As que estão faltando:
+          pip install robotframework-databaselibrary
+          pip install rpaframework                      # instala RPA.Excel.Files, RPA.JSON, etc.
+          # Se você tiver um requirements.txt no repo (recomendado!):
+          # pip install -r requirements.txt
+    
       - name: Install browser drivers (opcional, para SeleniumLibrary)
         if: success()  # Só roda se as instalações anteriores deram certo
         run: |
