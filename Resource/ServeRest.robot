@@ -6,6 +6,8 @@ Resource    ../Utils/Utils.robot
 #TELA
 ${TELA_SERVEREST}                            https://front.serverest.dev/login
 
+${BASE_URL}                                  =http://localhost:3000
+
 #INPUTS (CAIXA DE TEXTO)
 ${CAMPO_EMAIL}                               //input[@id='email']
 ${CAMPO_SENHA}                               //input[@id='password']
