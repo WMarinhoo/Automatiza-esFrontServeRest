@@ -52,14 +52,19 @@ Este repositório contém automações desenvolvidas para o **front do ServeRest
    git clone https://github.com/WMarinhoo/Automatiza-esFrontServeRest.git
 
 2.Acesse a pasta do projeto:
+```bash
 cd Automatiza-esFrontServeRest
+```
 
 3.Instale as dependências (exemplo com pip):
+```bash
 pip install -r requirements.txt
+```
 
-3.Execute os testes:
+4.Execute os testes:
+```bash
 robot TestCase/
-
+```
 ---
 
 > Desenvolvido com 💛 e foco em qualidade de software. 🚀  
