@@ -39,7 +39,7 @@ jobs:
           # Ou use robotframework-browser (mais fácil, sem driver manual)
           # rfbrowser init   # Rode isso se usar Browser Library
 
-      - name: Run Robot Framework tests
+      - name: Run Robot Framework TestCase
         run: |
           # Comando básico: roda todos os .robot na pasta tests/
           robot --outputdir results --loglevel TRACE:INFO tests/
