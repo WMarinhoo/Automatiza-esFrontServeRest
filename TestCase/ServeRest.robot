@@ -73,7 +73,6 @@ Cenário 06: Cadastrar produtos no ServeRest
     Printar tela
     Sleep    5s
 
-
 Cenário 07: Forçar Cadastrar produtos dubplicados no ServeRest
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
@@ -87,5 +86,14 @@ Cenário 07: Forçar Cadastrar produtos dubplicados no ServeRest
     Fazer Upload de Imagem Dinâmico    ${CAMPO_IMAGEM}    ${NOME_IMAGEM}
     E Clicar no botão "Cadastrar"
     Ler Mensagem De Erro Cadastro Produto
+    Printar tela
+    Sleep    5s
+
+Cenário 08: Listar produtos no ServeRest
+    Dado que esteja no Portal "ServeRest"
+    E Inserir no campo "Email" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Senha" o valor "teste"
+    E Clicar no botão "Entrar"
+    E Clicar no botão "Listar Produtos"
     Printar tela
     Sleep    5s
