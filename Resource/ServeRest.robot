@@ -18,6 +18,7 @@ ${BOTAO_CADASTRE_SE}                          //a[normalize-space()='Cadastre-se
 ${BOTAO_CADASTRAR_ADM}                        //input[@id='administrador']
 ${BOTAO_CADASTRAR}                            //button[normalize-space()='Cadastrar']
 ${BOTAO_LISTAR_USUARIOS}                      //a[@data-testid='listarUsuarios']
+${BOTAO_EXCLUIR_USUARIO}                      //body[1]/div[1]/div[1]/div[1]/p[1]/table[1]/tbody[1]/tr[1]/td[5]/div[1]/button[2]
 
 *** Keywords ***
 Dado que esteja no Portal "ServeRest"

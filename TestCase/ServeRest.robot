@@ -41,3 +41,14 @@ Cenário 04: Listar usuários no ServeRest
     E Clicar no botão "Listar Usuários"
     Printar tela
     Sleep    5s
+
+Cenário 05: Excluir usuários no ServeRest
+    Dado que esteja no Portal "ServeRest"
+    E Inserir no campo "Email Usuario" o valor "wendelmarinhoo@qa.com.br"
+    E Inserir no campo "Senha Usuario" o valor "teste"
+    E Clicar no botão "Entrar"
+    E Clicar no botão "Listar Usuários"
+    Printar tela
+    E Clicar no botão "Excluir Usuário"
+    Printar tela
+    Sleep    5s
