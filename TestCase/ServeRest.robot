@@ -7,6 +7,7 @@ Resource    ../Resource/ServeRest.robot
 
 #CENÁRIOS USUÁRIOS
 Cenário 01: realizar login no ServeRest
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
@@ -15,6 +16,7 @@ Cenário 01: realizar login no ServeRest
     Sleep    5s
 
 Cenário 02: cadastrar usuário no ServeRest (Com permissão de Administrador)
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Clicar no botão "Cadastre se"
     E Inserir no campo "Nome" o valor "Gustavo marinho"
@@ -26,6 +28,7 @@ Cenário 02: cadastrar usuário no ServeRest (Com permissão de Administrador)
     Sleep    5s
 
 Cenário 03: cadastrar usuário no ServeRest (Sem permissão de Administrador)
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Clicar no botão "Cadastre se"
     E Inserir no campo "Nome" o valor "Gustavo marinho"
@@ -36,6 +39,7 @@ Cenário 03: cadastrar usuário no ServeRest (Sem permissão de Administrador)
     Sleep    5s
 
 Cenário 04: Listar usuários no ServeRest
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
@@ -45,6 +49,7 @@ Cenário 04: Listar usuários no ServeRest
     Sleep    5s
 
 Cenário 05: Excluir usuários no ServeRest
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
@@ -58,6 +63,7 @@ Cenário 05: Excluir usuários no ServeRest
 #CENÁRIOS PRODUTOS
 Cenário 06: Cadastrar produtos no ServeRest
 #CENÁRIOS PRODUTOS
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
@@ -73,6 +79,7 @@ Cenário 06: Cadastrar produtos no ServeRest
     Sleep    5s
 
 Cenário 07: Forçar Cadastrar produtos dubplicados no ServeRest
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
@@ -89,6 +96,7 @@ Cenário 07: Forçar Cadastrar produtos dubplicados no ServeRest
     Sleep    5s
 
 Cenário 08: Listar produtos no ServeRest
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"
@@ -98,6 +106,7 @@ Cenário 08: Listar produtos no ServeRest
     Sleep    5s
 
 Cenário 09: Excluir produtos no ServeRest
+    Abrir Navegador Headless
     Dado que esteja no Portal "ServeRest"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
     E Inserir no campo "Senha" o valor "teste"

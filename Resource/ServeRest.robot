@@ -8,6 +8,9 @@ ${TELA_SERVEREST}                            https://front.serverest.dev/login
 
 ${BASE_URL}                                  =http://localhost:3000
 
+#BROWSER
+${BROWSER}                                   chrome
+
 #INPUTS (CAIXA DE TEXTO)
 ${CAMPO_EMAIL}                               //input[@id='email']
 ${CAMPO_SENHA}                               //input[@id='password']
@@ -32,7 +35,20 @@ ${BOTAO_EXCLUIR_PRODUTO}                      //tbody/tr[1]/td[6]/div[1]/button[
 #MENSAGENS
 ${MENSAGEM_ALERT}                             //div[@role='alert']
 
+
 *** Keywords ***
+
+Abrir Navegador Headless
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --disable-gpu
+    
+    Create Webdriver    Chrome    options=${options}
+
+
+
 Dado que esteja no Portal "ServeRest"
     Open Browser                                                          ${TELA_SERVEREST}                                 chrome 
     Maximize Browser Window
