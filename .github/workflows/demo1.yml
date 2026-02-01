@@ -1,69 +1,65 @@
-name: Robot Framework TestCase  # Nome que aparece na aba Actions
+name: Robot Framework TestCase
 
 on:
   push:
-    branches: [ main ]          # Roda em todo push para main (seu "deploy")
+    branches: [ main ]
   pull_request:
-    branches: [ main ]          # Opcional: roda também em PRs para testar antes de merge
-  workflow_dispatch:            # Opcional: permite rodar manualmente na aba Actions
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   robot-TestCase:
-    runs-on: ubuntu-latest      # Máquina Linux gratuita e rápida
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4  # Baixa seu código
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'    # Use 3.11 ou 3.10 se preferir (3.12 é estável em 2025/2026)
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
           pip install robotframework
-          # Adicione as bibliotecas que você usa (exemplos comuns):
-          pip install robotframework-seleniumlibrary          # Para testes web com browser
-          pip install robotframework-requests                 # Para APIs/HTTP
-          pip install robotframework-appiumlibrary            # Se tiver mobile
-          pip install robotframework-browser                  # Alternativa moderna ao Selenium (recomendado)
-          # pip install -r requirements.txt                   # Se você tiver um arquivo requirements.txt com todas as deps
-          # As que estão faltando:
+          pip install robotframework-seleniumlibrary
+          pip install robotframework-requests
+          pip install robotframework-appiumlibrary
+          pip install robotframework-browser
           pip install robotframework-databaselibrary
-          pip install rpaframework                      # instala RPA.Excel.Files, RPA.JSON, etc.
-          # Se você tiver um requirements.txt no repo (recomendado!):
+          pip install rpaframework
+          pip install robotframework-faker          # ← Adicione esta linha!
+          # Se tiver requirements.txt → descomente:
           # pip install -r requirements.txt
-    
+
       - name: Install browser drivers (opcional, para SeleniumLibrary)
-        if: success()  # Só roda se as instalações anteriores deram certo
+        if: success()
         run: |
-          # Para Chrome (padrão no ubuntu-latest)
           pip install webdriver-manager
-          # Ou use robotframework-browser (mais fácil, sem driver manual)
-          # rfbrowser init   # Rode isso se usar Browser Library
+          # Se usar Browser Library (recomendado):
+          # rfbrowser init
 
-      - name: Run Robot Framework TestCase
+      - name: Install ServeRest (via npm)
+        run: npm install -g serverest@latest
+
+      - name: Start ServeRest in background
         run: |
-          # Comando básico: roda todos os .robot na pasta TestCase/
-          robot --outputdir results --loglevel TRACE:INFO TestCase/
-          robot --outputdir results TestCase/
-          # Exemplos alternativos (descomente o que precisar):
-          robot --outputdir results --include Smoke TestCase/            # Só cenários com tag @Smoke
-          robot --outputdir results --variable ENV:PROD TestCase/           # Passa variável de ambiente
-          robot --outputdir results --exclude NotReady TestCase/            # Ignora cenários pendentes
-          python -m robot.run --outputdir results TestCase/                 # Alternativa usando módulo
+          serverest start --port 3000 &
+          sleep 10  # Espera o servidor iniciar
 
-      - name: Upload results as artifact  # Salva relatórios mesmo se falhar (muito útil!)
-        if: always()  # Roda sempre (sucesso ou falha)
+      - name: Run Robot Framework tests
+        run: |
+          robot --outputdir results \
+                --loglevel TRACE:DEBUG \
+                --variable BASE_URL:http://localhost:3000 \
+                TestCase/
+
+      - name: Upload results as artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: robot-results
-          path: results/                # Pasta com log.html, report.html, output.xml
-          retention-days: 7             # Mantém por 7 dias (ajuste se quiser)
-
-      # Opcional: Envia relatório por email ou Slack se falhar (adicione se precisar)
-      # - name: Notify on failure
-      #   if: failure()
-      #   uses: some-action-to-notify...
+          path: results/
+          retention-days: 7
