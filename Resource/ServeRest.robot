@@ -45,13 +45,12 @@ Abrir Navegador Headless
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     Call Method    ${options}    add_argument    --disable-gpu
     
-    Create Webdriver    Chrome    options=${options}
+    Open Browser    ${TELA_SERVEREST}    chrome    options=${options}  
 
 
-
-Dado que esteja no Portal "ServeRest"
-    Open Browser                                                          ${TELA_SERVEREST}                                 chrome 
-    Maximize Browser Window
+# Dado que esteja no Portal "ServeRest"
+#     Open Browser                                                          ${TELA_SERVEREST}                                 chrome 
+#     Maximize Browser Window
 
 E Inserir no campo "${CAMPO}" o valor "${VALOR}"
     ${CAMPO}=    Gera Frase Em String                                     ${CAMPO} 
