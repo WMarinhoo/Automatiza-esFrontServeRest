@@ -16,6 +16,7 @@ Cenário 01: realizar login no ServeRest
 
 Cenário 02: cadastrar usuário no ServeRest (Com permissão de Administrador)
     Abrir Navegador Headless
+    # Dado que esteja no Portal "ServeRest"
     E Clicar no botão "Cadastre se"
     E Inserir no campo "Nome" o valor "Gustavo marinho"
     E Inserir no campo "Email" o valor "gustavomarinhoo@qa.com.br"
